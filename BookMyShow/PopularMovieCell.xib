@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="PopularMovieCellIdentifier" selectionStyle="default" indentationWidth="10" rowHeight="157" id="KGk-i7-Jjw" customClass="PopularMovieCell" customModule="BookMyShow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="s4q-qo-Fxo" userLabel="posterImage">
+                        <rect key="frame" x="8" y="19.5" width="100" height="117.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="s4q-qo-Fxo" secondAttribute="height" multiplier="100:120" id="Nwm-19-a9D"/>
+                            <constraint firstAttribute="width" constant="100" id="iX3-R7-HuP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkO-Un-beg" userLabel="movieName">
+                        <rect key="frame" x="124" y="24" width="188" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Release date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbj-rH-tM2" userLabel="releaseDate">
+                        <rect key="frame" x="124" y="46" width="172" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gri-pA-B34" userLabel="thumbsUpImage">
+                        <rect key="frame" x="124" y="74.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="dIe-qa-e5e"/>
+                            <constraint firstAttribute="width" constant="20" id="esd-Hq-sVE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJW-Ln-7lh" userLabel="votingCount">
+                        <rect key="frame" x="152" y="75" width="10.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXz-km-P1G" userLabel="Votes">
+                        <rect key="frame" x="170.5" y="75" width="125.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MY8-b7-WGA" userLabel="Book now">
+                        <rect key="frame" x="210" y="104" width="84" height="34"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                        <state key="normal" title="Book now">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="GXz-km-P1G" secondAttribute="trailing" constant="8" id="10n-bs-rbM"/>
+                    <constraint firstItem="GXz-km-P1G" firstAttribute="leading" secondItem="lJW-Ln-7lh" secondAttribute="trailing" constant="8" id="1y8-ez-d8v"/>
+                    <constraint firstItem="gri-pA-B34" firstAttribute="leading" secondItem="s4q-qo-Fxo" secondAttribute="trailing" constant="16" id="4b8-Pm-dPx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MY8-b7-WGA" secondAttribute="bottom" constant="8" id="7f6-ah-6PC"/>
+                    <constraint firstItem="Nbj-rH-tM2" firstAttribute="leading" secondItem="s4q-qo-Fxo" secondAttribute="trailing" constant="16" id="9Ol-td-dem"/>
+                    <constraint firstItem="gri-pA-B34" firstAttribute="top" secondItem="Nbj-rH-tM2" secondAttribute="bottom" constant="8" id="9uf-Tc-qaM"/>
+                    <constraint firstItem="VkO-Un-beg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="ARF-3b-znd"/>
+                    <constraint firstAttribute="trailing" secondItem="VkO-Un-beg" secondAttribute="trailing" constant="8" id="Bas-vb-Zsy"/>
+                    <constraint firstItem="GXz-km-P1G" firstAttribute="top" secondItem="Nbj-rH-tM2" secondAttribute="bottom" constant="8" id="Bza-u4-OaC"/>
+                    <constraint firstItem="MY8-b7-WGA" firstAttribute="top" secondItem="GXz-km-P1G" secondAttribute="bottom" constant="8" id="Cpb-lk-qeB"/>
+                    <constraint firstItem="s4q-qo-Fxo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="EdY-XL-Yo2"/>
+                    <constraint firstItem="lJW-Ln-7lh" firstAttribute="leading" secondItem="gri-pA-B34" secondAttribute="trailing" constant="8" id="FmP-Uf-FzY"/>
+                    <constraint firstItem="VkO-Un-beg" firstAttribute="leading" secondItem="s4q-qo-Fxo" secondAttribute="trailing" constant="16" id="GRI-Nz-BHP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MY8-b7-WGA" secondAttribute="trailing" constant="10" id="HQ5-te-T3n"/>
+                    <constraint firstItem="lJW-Ln-7lh" firstAttribute="top" secondItem="Nbj-rH-tM2" secondAttribute="bottom" constant="8" id="Ha0-IJ-L5y"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Nbj-rH-tM2" secondAttribute="trailing" constant="8" id="Hmm-mV-S7C"/>
+                    <constraint firstItem="GXz-km-P1G" firstAttribute="leading" secondItem="lJW-Ln-7lh" secondAttribute="trailing" constant="8" id="ZEE-xE-FFn"/>
+                    <constraint firstItem="s4q-qo-Fxo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="k4F-Ao-8oU"/>
+                    <constraint firstItem="Nbj-rH-tM2" firstAttribute="top" secondItem="VkO-Un-beg" secondAttribute="bottom" constant="8" id="luh-VB-olC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="movieNameLabel" destination="VkO-Un-beg" id="Vge-Af-PTo"/>
+                <outlet property="posterImage" destination="s4q-qo-Fxo" id="g6t-OI-wMh"/>
+                <outlet property="releaseDateLabel" destination="Nbj-rH-tM2" id="c7E-IJ-Ec4"/>
+                <outlet property="votingCountLabel" destination="lJW-Ln-7lh" id="snh-j2-EgM"/>
+            </connections>
+            <point key="canvasLocation" x="-268.1159420289855" y="103.45982142857143"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
