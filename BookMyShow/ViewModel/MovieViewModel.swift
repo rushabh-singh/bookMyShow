@@ -14,17 +14,40 @@ struct MovieViewModel {
     let voteCount : String
     let movieType : String
     let posterUrl : URL
+    let movieId : Int
     
     init(movie : MovieItem?) {
-        self.movieName = movie?.title ?? "Movie Name NA"
-        self.releaseDate = movie?.releaseDate ?? "Release Date NA"
+        
+        movieType = movie?.adult ?? true ? BMSConstant.adultMovieWarning : BMSConstant.familyMovieMessage
+        self.movieId = movie?.id ?? 0
         self.voteCount = String(movie?.voteCount ?? 0)
+        if let movieName = movie?.title{
+            if movieName.isEmpty{
+                self.movieName = BMSConstant.movieNameNotAvailable
+            }
+            else{
+                self.movieName = movieName
+            }
+        } else{
+            self.movieName = BMSConstant.movieNameNotAvailable
+        }
+        
+        if let releaseDate = movie?.releaseDate{
+            if releaseDate.isEmpty{
+                self.releaseDate = BMSConstant.releaseDateNotAvailable
+            }
+            else{
+                self.releaseDate = releaseDate
+            }
+        } else{
+            self.releaseDate = BMSConstant.releaseDateNotAvailable
+        }
+        
         if let filePath = movie?.posterPath{
             self.posterUrl = URL(string: APIConstants.ImageBaseUrl + ImageSizeConstant.smallImageSize + filePath)!
         }
         else{
             self.posterUrl = URL(string : "")!
         }
-        movieType = movie?.adult ?? true ? "Only 18+ allowed" : "Family Movie"
     }
 }
