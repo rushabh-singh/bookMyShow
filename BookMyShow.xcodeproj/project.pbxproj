@@ -19,6 +19,11 @@
 		9BF1A39C264C31EE00A769C6 /* HomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1A39B264C31EE00A769C6 /* HomeViewControllerDelegate.swift */; };
 		9BF1A3A2264C34C100A769C6 /* PopularMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1A3A0264C34C100A769C6 /* PopularMovieCell.swift */; };
 		9BF1A3A3264C34C100A769C6 /* PopularMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF1A3A1264C34C100A769C6 /* PopularMovieCell.xib */; };
+		9BF1A3A8264C57DB00A769C6 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1A3A7264C57DB00A769C6 /* HttpUtil.swift */; };
+		9BF1A3B3264C690B00A769C6 /* PopularMoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1A3B2264C690B00A769C6 /* PopularMoviesModel.swift */; };
+		9BF1A3BD264CCE7C00A769C6 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1A3BC264CCE7C00A769C6 /* APIConstants.swift */; };
+		9BF1A3C2264CD42D00A769C6 /* BMSConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1A3C1264CD42D00A769C6 /* BMSConstant.swift */; };
+		9BF1A3C7264CE34500A769C6 /* LazyImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1A3C6264CE34500A769C6 /* LazyImageVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		9BF1A39B264C31EE00A769C6 /* HomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		9BF1A3A0264C34C100A769C6 /* PopularMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieCell.swift; sourceTree = "<group>"; };
 		9BF1A3A1264C34C100A769C6 /* PopularMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieCell.xib; sourceTree = "<group>"; };
+		9BF1A3A7264C57DB00A769C6 /* HttpUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
+		9BF1A3B2264C690B00A769C6 /* PopularMoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesModel.swift; sourceTree = "<group>"; };
+		9BF1A3BC264CCE7C00A769C6 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		9BF1A3C1264CD42D00A769C6 /* BMSConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMSConstant.swift; sourceTree = "<group>"; };
+		9BF1A3C6264CE34500A769C6 /* LazyImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +119,14 @@
 			children = (
 				9BF1A34A264C20FE00A769C6 /* AppDelegate.swift */,
 				9BF1A34C264C20FE00A769C6 /* SceneDelegate.swift */,
+				9BF1A3A7264C57DB00A769C6 /* HttpUtil.swift */,
 				9BF1A34E264C20FE00A769C6 /* HomeViewController.swift */,
+				9BF1A3B2264C690B00A769C6 /* PopularMoviesModel.swift */,
 				9BF1A396264C316800A769C6 /* HomeViewControllerDataSource.swift */,
 				9BF1A3A0264C34C100A769C6 /* PopularMovieCell.swift */,
+				9BF1A3C6264CE34500A769C6 /* LazyImageVIew.swift */,
+				9BF1A3C1264CD42D00A769C6 /* BMSConstant.swift */,
+				9BF1A3BC264CCE7C00A769C6 /* APIConstants.swift */,
 				9BF1A3A1264C34C100A769C6 /* PopularMovieCell.xib */,
 				9BF1A39B264C31EE00A769C6 /* HomeViewControllerDelegate.swift */,
 				9BF1A350264C20FE00A769C6 /* Main.storyboard */,
@@ -273,7 +288,12 @@
 			files = (
 				9BF1A3A2264C34C100A769C6 /* PopularMovieCell.swift in Sources */,
 				9BF1A397264C316900A769C6 /* HomeViewControllerDataSource.swift in Sources */,
+				9BF1A3B3264C690B00A769C6 /* PopularMoviesModel.swift in Sources */,
+				9BF1A3C2264CD42D00A769C6 /* BMSConstant.swift in Sources */,
+				9BF1A3C7264CE34500A769C6 /* LazyImageVIew.swift in Sources */,
 				9BF1A34F264C20FE00A769C6 /* HomeViewController.swift in Sources */,
+				9BF1A3A8264C57DB00A769C6 /* HttpUtil.swift in Sources */,
+				9BF1A3BD264CCE7C00A769C6 /* APIConstants.swift in Sources */,
 				9BF1A39C264C31EE00A769C6 /* HomeViewControllerDelegate.swift in Sources */,
 				9BF1A34B264C20FE00A769C6 /* AppDelegate.swift in Sources */,
 				9BF1A34D264C20FE00A769C6 /* SceneDelegate.swift in Sources */,
