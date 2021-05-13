@@ -8,11 +8,11 @@
 import Foundation
 
 struct PopularMoviesModel: Codable {
-    let results: [Result]
+    let results: [MovieItem]
 }
 
-// MARK: - Result
-struct Result: Codable {
+// MARK: - Movie Item
+struct MovieItem: Codable {
     let adult: Bool
     let id: Int
     let originalTitle, overview: String
