@@ -16,13 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your movie" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jDE-QL-LCT">
-                                <rect key="frame" x="16" y="113" width="382" height="34"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJP-Yy-8W8" userLabel="Search your favourite movie">
+                                <rect key="frame" x="10" y="104" width="394" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Search your favourite movie">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFj-rz-GaL"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mwz-ED-Tl0">
-                                <rect key="frame" x="8" y="163" width="398" height="691"/>
+                                <rect key="frame" x="8" y="160" width="398" height="694"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -30,12 +41,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mwz-ED-Tl0" firstAttribute="top" secondItem="jDE-QL-LCT" secondAttribute="bottom" constant="16" id="C9f-Gv-Q13"/>
+                            <constraint firstItem="NJP-Yy-8W8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1LG-6w-O3a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mwz-ED-Tl0" secondAttribute="bottom" constant="8" id="D9v-Lh-4U8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mwz-ED-Tl0" secondAttribute="trailing" constant="8" id="HGn-83-sd8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jDE-QL-LCT" secondAttribute="trailing" constant="16" id="RAZ-CP-OHc"/>
-                            <constraint firstItem="jDE-QL-LCT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="vOP-bh-iG3"/>
-                            <constraint firstItem="jDE-QL-LCT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xEn-fw-1EP"/>
+                            <constraint firstItem="NJP-Yy-8W8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Jrj-Au-J5z"/>
+                            <constraint firstItem="mwz-ED-Tl0" firstAttribute="top" secondItem="NJP-Yy-8W8" secondAttribute="bottom" constant="20" id="jCO-Bx-WqA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJP-Yy-8W8" secondAttribute="trailing" constant="10" id="s6b-Qg-iWq"/>
                             <constraint firstItem="mwz-ED-Tl0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="zPA-6h-kem"/>
                         </constraints>
                     </view>
