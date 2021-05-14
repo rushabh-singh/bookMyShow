@@ -12,6 +12,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var scrollableContentView: UIView!
     @IBOutlet weak var scrollableContentHeightConstraint: NSLayoutConstraint!
     var movieId : Int?
+    var movieName : String?
     let synopsisView = SynopsisView()
     init(movieId : Int) {
         self.movieId = movieId
@@ -35,11 +36,17 @@ class MovieDetailViewController: UIViewController {
         let urlString = APIConstants.BaseUrl + "\(self.movieId ?? 0)?api_key=" + APIConstants.API_KEY
         HttpUtil.shared.getData(urlString: urlString, responseType: SynopsisModel.self) { (response) in
             DispatchQueue.main.async {
+                self.movieName = response?.title
                 self.synopsisView.synopsisViewModel = SynopsisViewModel(data: response)
                 self.synopsisView.frame.size.height = self.synopsisView.getHeightOfView()
                 self.scrollableContentHeightConstraint.constant = self.synopsisView.getHeightOfView() + VERTICAL_PADDING
+                self.setMovieDataInCache()
             }
         }
     }
     
+    func setMovieDataInCache(){
+        let movie = RecentSearchModel(movieId: self.movieId ?? 0, movieName: self.movieName ?? "")
+        RecentSearchCacheHandler().storeMovieInCache(movie: movie)
+    }
 }

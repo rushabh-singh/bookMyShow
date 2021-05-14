@@ -23,7 +23,7 @@ class LazyImageView: UIImageView
                 if let imageData = try? Data(contentsOf: imageUrl){
                     if let image = UIImage(data: imageData){
                         DispatchQueue.main.async{
-                            self!.imageCache.setObject(image, forKey: imageUrl as AnyObject)
+                            self?.imageCache.setObject(image, forKey: imageUrl as AnyObject)
                             self?.image = image
                         }
                     }

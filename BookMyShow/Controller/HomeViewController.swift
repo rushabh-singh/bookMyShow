@@ -7,7 +7,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, SearchCellProtocol {
+    
     var moviesList : [MovieViewModel]?
     let POPULAR_MOVIE_CELL_IDENTIFIER = "PopularMovieCellIdentifier"
     let POPULAR_MOVIE_CELL = "PopularMovieCell"
@@ -38,7 +39,6 @@ class HomeViewController: UIViewController {
                     self.popularMoviesTableView.reloadData()
                 }
             }else{
-                //handle when no movies present
                 DispatchQueue.main.async {
                     self.popularMoviesTableView.isHidden = true
                 }
@@ -46,6 +46,15 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func searchButtonClicked(_ sender: Any) {
+        let searchVC = SearchViewController()
+        searchVC.delegate = self
+        self.navigationController?.present(searchVC, animated: true, completion: nil)
+    }
     
+    //Protocol method
+    func openMovieDetailFor(movieId: Int) {
+        self.showMovieDetailFor(movieId: movieId)
+    }
 }
 

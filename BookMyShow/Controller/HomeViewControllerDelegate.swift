@@ -13,10 +13,15 @@ extension HomeViewController : UITableViewDelegate {
         if self.moviesList?.count ?? 0 > indexPath.row{
             let movieResult : MovieViewModel? = self.moviesList?[indexPath.row]
             if let movie = movieResult {
-                let movieDetailVC = MovieDetailViewController(movieId: movie.movieId)
-                self.navigationController?.pushViewController(movieDetailVC, animated: true)
+                showMovieDetailFor(movieId: movie.movieId)
             }
         }
     }
     
+    func showMovieDetailFor(movieId : Int){
+        DispatchQueue.main.async {
+            let movieDetailVC = MovieDetailViewController(movieId: movieId)
+            self.navigationController?.pushViewController(movieDetailVC, animated: true)
+        }
+    }
 }
