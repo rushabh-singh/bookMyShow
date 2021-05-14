@@ -13,8 +13,8 @@ class PopularMovieCell: UITableViewCell {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var movieNameLabel: UILabel!
     @IBOutlet weak var posterImage: LazyImageView!
-    
     @IBOutlet weak var movieTypeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

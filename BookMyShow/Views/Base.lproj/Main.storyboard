@@ -51,7 +51,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VJw-ET-5jv">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="cZA-3g-kha"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="cZA-3g-kha">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="popularMoviesTableView" destination="mwz-ED-Tl0" id="h1R-Fb-zJf"/>
@@ -71,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.032015592210571056" green="0.025754102077392205" blue="0.20788388324873097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

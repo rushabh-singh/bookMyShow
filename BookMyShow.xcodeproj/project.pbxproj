@@ -163,8 +163,8 @@
 				9BF1A34C264C20FE00A769C6 /* SceneDelegate.swift */,
 				9BF1A3CE264CEC4300A769C6 /* Constants */,
 				9BF1A3CF264CEC5400A769C6 /* Utils */,
-				9BF1A3D3264CEC7C00A769C6 /* Controller */,
 				9B5F5082264E33A300562450 /* Protocols */,
+				9BF1A3D3264CEC7C00A769C6 /* Controller */,
 				9BF1A3D7264CEC9500A769C6 /* Model */,
 				9BF1A3E4264D10A600A769C6 /* ViewModel */,
 				9BF1A3D8264CECBB00A769C6 /* Views */,
@@ -240,12 +240,12 @@
 		9BF1A3D8264CECBB00A769C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9BB3A11B264D470B008CE9A6 /* SynopsisView.swift */,
-				9BB3A116264D46EE008CE9A6 /* SynopsisView.xib */,
 				9BF1A3A0264C34C100A769C6 /* PopularMovieCell.swift */,
 				9BF1A3A1264C34C100A769C6 /* PopularMovieCell.xib */,
 				9B5F506D264E28B000562450 /* SearchTableViewCell.swift */,
 				9B5F506E264E28B000562450 /* SearchTableViewCell.xib */,
+				9BB3A11B264D470B008CE9A6 /* SynopsisView.swift */,
+				9BB3A116264D46EE008CE9A6 /* SynopsisView.xib */,
 				9BF1A350264C20FE00A769C6 /* Main.storyboard */,
 				9BF1A355264C210900A769C6 /* LaunchScreen.storyboard */,
 			);

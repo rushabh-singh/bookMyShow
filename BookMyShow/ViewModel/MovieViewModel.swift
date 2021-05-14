@@ -19,8 +19,18 @@ struct MovieViewModel {
     init(movie : MovieItem?) {
         
         movieType = movie?.adult ?? true ? BMSConstant.adultMovieWarning : BMSConstant.familyMovieMessage
+        
         self.movieId = movie?.id ?? 0
+        
         self.voteCount = String(movie?.voteCount ?? 0)
+        
+        if let filePath = movie?.posterPath{
+            self.posterUrl = URL(string: APIConstants.ImageBaseUrl + ImageSizeConstant.smallImageSize + filePath)!
+        }
+        else{
+            self.posterUrl = URL(string : "")!
+        }
+        
         if let movieName = movie?.title{
             if movieName.isEmpty{
                 self.movieName = BMSConstant.movieNameNotAvailable
@@ -41,13 +51,6 @@ struct MovieViewModel {
             }
         } else{
             self.releaseDate = BMSConstant.releaseDateNotAvailable
-        }
-        
-        if let filePath = movie?.posterPath{
-            self.posterUrl = URL(string: APIConstants.ImageBaseUrl + ImageSizeConstant.smallImageSize + filePath)!
-        }
-        else{
-            self.posterUrl = URL(string : "")!
         }
     }
 }

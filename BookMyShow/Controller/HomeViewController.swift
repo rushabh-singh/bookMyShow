@@ -12,11 +12,12 @@ class HomeViewController: UIViewController, SearchCellProtocol {
     var moviesList : [MovieViewModel]?
     let POPULAR_MOVIE_CELL_IDENTIFIER = "PopularMovieCellIdentifier"
     let POPULAR_MOVIE_CELL = "PopularMovieCell"
+    let NAVIGATION_TITLE = "Popular Movies"
     @IBOutlet weak var popularMoviesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Popular Movies"
+        self.navigationItem.title = NAVIGATION_TITLE
         setupTableView()
         downloadMoviesList()
     }
@@ -33,6 +34,7 @@ class HomeViewController: UIViewController, SearchCellProtocol {
         HttpUtil.shared.getData(urlString: urlString, responseType: PopularMoviesModel.self) { (response) in
             if response?.results.count ?? 0 > 0 {
                 DispatchQueue.main.async {
+                    //Covert data model to viewModel for all business logic and validations
                     self.moviesList = response?.results.map({
                         return MovieViewModel(movie : $0)
                     })

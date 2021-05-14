@@ -21,6 +21,19 @@ struct RecentSearchCacheHandler {
         }
     }
     
+    func getRecentSearchedMovies() -> [RecentSearchModel] {
+        var recentSearches = [RecentSearchModel]()
+        if let data = UserDefaults.standard.data(forKey: RECENT_SEARCH_KEY) {
+            do {
+                let decoder = JSONDecoder()
+                recentSearches = try decoder.decode([RecentSearchModel].self, from: data)
+            } catch {
+                print("Unable to Decode (\(error))")
+            }
+        }
+        return recentSearches
+    }
+    
     private func updateCache(currentMovie : RecentSearchModel){
         var recentSearches = getRecentSearchedMovies()
         if recentSearches.isEmpty{
@@ -47,18 +60,5 @@ struct RecentSearchCacheHandler {
         } catch {
             print("Unable to Encode Array(\(error))")
         }
-    }
-    
-    func getRecentSearchedMovies() -> [RecentSearchModel] {
-        var recentSearches = [RecentSearchModel]()
-        if let data = UserDefaults.standard.data(forKey: RECENT_SEARCH_KEY) {
-            do {
-                let decoder = JSONDecoder()
-                recentSearches = try decoder.decode([RecentSearchModel].self, from: data)
-            } catch {
-                print("Unable to Decode (\(error))")
-            }
-        }
-        return recentSearches
     }
 }

@@ -11,7 +11,6 @@ struct PopularMoviesModel: Codable {
     let results: [MovieItem]
 }
 
-// MARK: - Movie Item
 struct MovieItem: Codable {
     let adult: Bool
     let id: Int

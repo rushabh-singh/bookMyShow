@@ -28,11 +28,6 @@ class SynopsisView: UIView {
         }
     }
     
-    func getHeightOfView() -> CGFloat {
-        //variable heights + constant heights
-        return posterImage.frame.height + movieNameLabel.frame.size.height + overviewLabel.frame.size.height + 100
-    } 
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -43,16 +38,21 @@ class SynopsisView: UIView {
         setUpView()
     }
     
-    func setUpView() {
+    private func setUpView() {
         contentView = loadViewFromNib()
         contentView.frame = bounds
         addSubview(contentView)
     }
-     
-    func loadViewFromNib() -> UIView! {
+    
+    private func loadViewFromNib() -> UIView! {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
+    }
+    
+    func getHeightOfView() -> CGFloat {
+        //variable heights + constant heights
+        return posterImage.frame.height + movieNameLabel.frame.size.height + overviewLabel.frame.size.height + 100
     }
 }

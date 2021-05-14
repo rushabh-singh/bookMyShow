@@ -24,13 +24,16 @@ struct SynopsisViewModel {
         } else{
             self.duration = BMSConstant.notAvailable
         }
+        
         self.movieId = data?.id ?? 0
+        
         if let filePath = data?.posterPath{
             self.posterUrl = URL(string: APIConstants.ImageBaseUrl + ImageSizeConstant.smallImageSize + filePath)!
         }
         else{
             self.posterUrl = URL(string : "")!
         }
+        
         if let overview = data?.overview{
             if overview.isEmpty{
                 self.overview = BMSConstant.overviewNotAvailable
